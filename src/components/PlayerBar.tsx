@@ -24,7 +24,7 @@ export function PlayerBar() {
   const RepeatIcon = p.repeat === "one" ? Repeat1 : Repeat;
 
   return (
-    <footer className="grid h-24 shrink-0 grid-cols-[1fr_2fr_1fr] items-center gap-4 border-t border-line bg-panel px-6">
+    <footer className="grid h-24 shrink-0 grid-cols-[1fr_2fr] items-center gap-4 border-t border-line bg-panel px-6 sm:grid-cols-[1fr_2fr_1fr]">
       <div className="min-w-0">
         {p.current ? (
           <>
@@ -83,7 +83,7 @@ export function PlayerBar() {
         </div>
       </div>
 
-      <div className="flex items-center justify-end gap-2 text-muted">
+      <div className="hidden items-center justify-end gap-2 text-muted sm:flex">
         <Volume2 size={16} />
         <input
           type="range"
